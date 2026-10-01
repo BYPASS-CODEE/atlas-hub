@@ -1,127 +1,217 @@
-# Atlas Hub
+<p align="center">
+  <strong>ATLAS HUB</strong>
+</p>
 
-Atlas Hub یک پلتفرم Full-Stack برای مدیریت عملیات کسب‌وکار، مشتریان، پروژه‌ها، وظایف، پشتیبانی و فاکتورهاست. این پروژه نمونه‌ای واقعی برای نمایش React، TypeScript، Node.js، REST API، طراحی دیتابیس، Authentication و RBAC است.
+<p align="center">
+  Full-Stack business operations platform for clients, projects, teams and service delivery.
+</p>
+
+<p align="center">
+  <a href="https://github.com/BYPASS-CODEE/atlas-hub"><img src="https://img.shields.io/badge/GitHub-BYPASS--CODEE%2Fatlas--hub-181717?logo=github" alt="GitHub repository" /></a>
+  <img src="https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=111827" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-7-3178C6?logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white" alt="Vite" />
+  <img src="https://img.shields.io/badge/Node.js-Express-339933?logo=node.js&logoColor=white" alt="Node.js and Express" />
+  <img src="https://img.shields.io/badge/SQLite-relational-003B57?logo=sqlite&logoColor=white" alt="SQLite" />
+</p>
+
+<p align="center">
+  <a href="#قابلیتهای-اصلی">Features</a> ·
+  <a href="#معماری">Architecture</a> ·
+  <a href="#امنیت">Security</a> ·
+  <a href="#product-showcase">Screenshots</a> ·
+  <a href="#تست-و-کیفیت">Testing</a> ·
+  <a href="#نصب-و-اجرا">Installation</a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/BYPASS-CODEE/atlas-hub">مشاهده Repository</a>
+</p>
+
+---
 
 ## معرفی پروژه
 
-این سامانه برای تیم‌ها و شرکت‌های خدماتی طراحی شده است تا چرخه‌ی کار از ثبت مشتری و پروژه تا پیگیری وظایف، تیکت‌های پشتیبانی، فاکتورها و گزارش‌ها در یک محیط یکپارچه انجام شود. رابط کاربری فارسی، راست‌چین، responsive و دارای Light/Dark Theme است.
+Atlas Hub یک پلتفرم Full-Stack برای مدیریت عملیات کسب‌وکار و ارائه‌ی خدمات است. این سامانه اطلاعات مشتری، پروژه، وظایف، پشتیبانی، فاکتورها و اعضای تیم را در یک workspace سازمانی متمرکز می‌کند.
 
-## 📸 Screenshots
+رابط کاربری با React و TypeScript ساخته شده و backend با Node.js و Express یک REST API واقعی در اختیار آن قرار می‌دهد. Authentication، نقش‌ها، دسترسی سازمانی و داده‌های رابطه‌ای SQLite نیز در خود پروژه پیاده‌سازی شده‌اند؛ بنابراین repository صرفاً یک UI mockup نیست.
 
-تصاویر زیر از اجرای واقعی پروژه تهیه شده‌اند و نسخه‌ی Light و Dark را در desktop و mobile نشان می‌دهند.
+## در یک نگاه
 
-### Desktop — Light
-
-![Atlas Hub Desktop Light](docs/screenshots/desktop-light.png)
-
-### Desktop — Dark
-
-![Atlas Hub Desktop Dark](docs/screenshots/desktop-dark.png)
-
-### Mobile — Light
-
-![Atlas Hub Mobile Light](docs/screenshots/mobile-light.jpg)
-
-### Mobile — Dark
-
-![Atlas Hub Mobile Dark](docs/screenshots/mobile-dark.jpg)
+| حوزه | پیاده‌سازی واقعی |
+|---|---|
+| Frontend | React + TypeScript + Vite |
+| Backend | Node.js + Express |
+| API | REST API |
+| Database | SQLite relational database |
+| Authentication | JWT + bcrypt password hashing |
+| Authorization | RBAC + organization-based access control |
+| UI | Persian RTL, responsive Light/Dark interface |
+| Testing | Authentication و database constraint tests |
+| Repository | Public GitHub repository |
 
 ## قابلیت‌های اصلی
 
-- ثبت‌نام، ورود، Password Hashing با `bcrypt` و Authentication مبتنی بر JWT
-- سازمان و اعضای سازمان، مدیریت مشتریان، پروژه‌ها و اعضای پروژه
-- وظایف، تیکت‌های پشتیبانی و پیام‌های تیکت
-- فاکتور، آیتم‌های فاکتور، پرداخت‌ها و گزارش‌های عملیاتی
-- اعلان‌ها، تنظیمات حساب، تغییر رمز عبور و مدیریت تیم
-- مرکز کنترل Admin، نقش‌ها و Audit Log
-- Empty State، Loading State، Error State و Toastهای قابل استفاده‌ی مجدد
-- Light/Dark Theme با persistence
+### Workspace & Dashboard
 
-## معماری سیستم
+- سازمان و workspace اعضا
+- Dashboard عملیاتی
+- خلاصه‌ی مشتریان، پروژه‌ها، وظایف، تیکت‌ها و فاکتورها
+- Empty, loading و error states برای حالت بدون داده
+
+### CRM
+
+- ثبت و مدیریت مشتریان
+- صفحه‌ی جزئیات مشتری
+- ارتباط مشتری با پروژه‌ها و فاکتورها
+- وضعیت فعال، غیرفعال و lead
+
+### Project Management
+
+- پروژه‌ها و اعضای پروژه
+- وضعیت و اولویت پروژه
+- وظایف، assignee، deadline و task comments
+- نمایش پیشرفت و workflow پروژه
+
+### Support & Notifications
+
+- Support tickets
+- دسته‌بندی، اولویت و وضعیت تیکت
+- Ticket messages
+- اعلان‌های کاربر و mark-as-read
+
+### Finance
+
+- Invoices و invoice items
+- محاسبه‌ی subtotal، tax و total
+- ثبت payments
+- وضعیت‌های draft، sent، paid، overdue و cancelled
+
+### Team & Access
+
+- فهرست اعضای سازمان
+- دعوت عضو جدید
+- تغییر نقش و مدیریت عضویت
+- نقش‌های `ADMIN`، `MANAGER`، `TEAM_MEMBER` و `CLIENT`
+
+### Administration
+
+- Admin / Control Center
+- مدیریت کاربران و سازمان‌ها
+- system overview
+- Audit logs و ثبت عملیات حساس
+
+## Product Showcase
+
+تصاویر زیر از build واقعی فعلی پروژه تهیه شده‌اند و نسخه‌های Light و Dark را نشان می‌دهند.
+
+### Desktop
+
+<p align="center">
+  <img src="docs/screenshots/desktop-light.png" width="48%" alt="Atlas Hub desktop light mode" />
+  <img src="docs/screenshots/desktop-dark.png" width="48%" alt="Atlas Hub desktop dark mode" />
+</p>
+
+<p align="center"><sub>Light Mode · Dark Mode</sub></p>
+
+### Mobile
+
+<p align="center">
+  <img src="docs/screenshots/mobile-light.jpg" width="24%" alt="Atlas Hub mobile light mode" />
+  <img src="docs/screenshots/mobile-dark.jpg" width="24%" alt="Atlas Hub mobile dark mode" />
+</p>
+
+<p align="center"><sub>Responsive Mobile · Light / Dark</sub></p>
+
+## معماری
 
 ```text
 React + TypeScript + Vite
-            ↓
-      REST API / Express
-            ↓
-   Authentication + RBAC
-            ↓
- SQLite relational database
+            │
+            ▼
+        REST API
+            │
+            ▼
+     Node.js + Express
+            │
+            ▼
+ Authentication / RBAC
+            │
+            ▼
+     SQLite relational DB
 ```
 
-Frontend در `src/` و backend در `server/` قرار دارد. سرور Express در `server.ts` APIها و در production فایل‌های build شده‌ی Vite را سرو می‌کند. دیتابیس SQLite در مسیر runtime `data/` ساخته می‌شود و در Git نادیده گرفته شده است.
-
-## ساختار پروژه
+### ساختار Repository
 
 ```text
-src/                  React application
-  api/                REST API clients
-  components/         Layout و UI components مشترک
-  context/            Auth، Theme و Toast state
-  pages/              public، auth، app و admin pages
-  types/              TypeScript domain types
-server/src/routes/    endpointهای REST
-server/src/middleware Authentication و RBAC
-server/src/database   schema و اتصال SQLite
-server/src/utils      auth، audit و notification utilities
-tests/                تست‌های Authentication و database constraints
+src/
+  api/                 REST API clients
+  components/          layouts و reusable UI components
+  context/             Auth، Theme و Toast state
+  pages/               public، auth، app و admin
+  types/               TypeScript domain types
+
+server/
+  src/routes/          routeهای REST API
+  src/middleware/      authentication و RBAC
+  src/database/        SQLite schema و database connection
+  src/utils/            auth، audit و notification utilities
+
+tests/                 authentication و database tests
+docs/screenshots/      تصاویر واقعی محصول
 ```
 
-## Frontend
-
-Frontend با React 19 و TypeScript ساخته شده است. Routing توسط `react-router-dom` انجام می‌شود و API clientها در `src/api` قرار دارند. Layoutهای public، workspace و control center جدا هستند و Button، Card، Input، Select، Textarea، Modal، Badge و EmptyState به‌صورت reusable پیاده‌سازی شده‌اند.
-
-Theme با semantic CSS tokens پیاده‌سازی شده، بدون reload تغییر می‌کند و مقدار انتخاب‌شده را در `localStorage` با کلید `atlas_theme` نگه می‌دارد. در نبود انتخاب کاربر، preference سیستم‌عامل استفاده می‌شود.
-
-## Backend
-
-Backend با Node.js، Express و TypeScript اجرا می‌شود. APIهای auth، clients، projects، tasks، tickets، invoices، team، reports، notifications، admin و contact در route moduleهای جدا قرار دارند. درخواست‌های محافظت‌شده از middleware احراز هویت عبور می‌کنند و routeهای مدیریتی با RBAC محدود می‌شوند.
-
-## احراز هویت و سطح دسترسی
+## Authentication & Authorization
 
 - Registration و Login در `/api/auth`
 - Password hashing با `bcryptjs`
-- صدور و اعتبارسنجی JWT
-- Authentication middleware برای APIهای خصوصی
-- نقش‌های `ADMIN`، `MANAGER`، `TEAM_MEMBER` و `CLIENT`
-- حفاظت backend برای Admin و منابع سازمانی
-- تغییر رمز عبور با بررسی رمز فعلی
-- ثبت عملیات مهم در Audit Log
+- صدور و verification توکن JWT
+- Bearer-token authentication middleware
+- بررسی active بودن حساب در هر درخواست محافظت‌شده
+- محدودسازی queryها بر اساس `organization_id`
+- بررسی ownership منابع در routeهای سازمانی برای کاهش ریسک IDOR
+- حفاظت کامل namespace مربوط به Admin با `requireAdmin`
+- ثبت عملیات حساس در `audit_logs`
 
-بررسی سازمان و مالکیت منابع در routeهای مرتبط انجام می‌شود تا دسترسی به داده‌ی سازمان دیگر از طریق تغییر شناسه امکان‌پذیر نباشد.
+### نقش‌ها
 
-### Roles & Access Control
-
-- `ADMIN`: دسترسی مرکز کنترل و عملیات مدیریتی کل سیستم؛ تنها این نقش می‌تواند نقش `ADMIN` اختصاص دهد.
-- `MANAGER`: مدیریت منابع عملیاتی سازمان، شامل مشتریان، پروژه‌ها، فاکتورها و اعضای تیم در محدوده‌ی سازمان.
-- `TEAM_MEMBER`: دسترسی عملیاتی به منابع مجاز سازمان و انجام وظایف محول‌شده.
+- `ADMIN`: دسترسی به Control Center و عملیات مدیریتی سیستم؛ تنها این نقش می‌تواند نقش `ADMIN` اختصاص دهد.
+- `MANAGER`: مدیریت منابع عملیاتی سازمان، از جمله مشتری، پروژه، فاکتور و اعضای تیم.
+- `TEAM_MEMBER`: دسترسی عملیاتی سازمان و انجام وظایف محول‌شده.
 - `CLIENT`: دسترسی محدود به اطلاعات و تیکت‌های مرتبط با خود.
-
-سطح دسترسی نهایی در backend بررسی می‌شود و صرفاً به کنترل‌های رابط کاربری وابسته نیست.
 
 ## پایگاه داده
 
-پروژه از SQLite با API داخلی `node:sqlite` استفاده می‌کند. schema شامل users، organizations، organization_members، clients، projects، project_members، tasks، task_comments، support_tickets، ticket_messages، invoices، invoice_items، payments، notifications، audit_logs و contact_messages است.
+Database واقعی پروژه SQLite است، نه PostgreSQL یا MongoDB. schema رابطه‌ای شامل این entityهاست:
 
-Foreign keyها فعال هستند، برای روابط اصلی constraint وجود دارد و SQLite با WAL mode اجرا می‌شود. دیتابیس runtime در `data/atlas.sqlite` ساخته می‌شود و commit نمی‌شود.
+`users` · `organizations` · `organization_members` · `clients` · `projects` · `project_members` · `tasks` · `task_comments` · `support_tickets` · `ticket_messages` · `invoices` · `invoice_items` · `payments` · `notifications` · `audit_logs` · `contact_messages`
+
+Foreign keyها فعال هستند، `CHECK` constraint برای status و role وجود دارد، indexهای عملیاتی تعریف شده‌اند و SQLite با WAL mode اجرا می‌شود.
 
 ## امنیت
 
-- رمزهای عبور به‌صورت plaintext ذخیره نمی‌شوند.
-- JWT secret از environment خوانده می‌شود.
-- در production، نبودن `AUTH_SECRET` باعث توقف startup می‌شود.
-- نقش‌ها و دسترسی‌ها در backend enforce می‌شوند.
-- queryهای منابع سازمانی با `organization_id` محدود می‌شوند.
-- Foreign key و check constraint برای داده‌ی معتبر استفاده شده‌اند.
-- `.env`، دیتابیس محلی، `node_modules` و build output در `.gitignore` هستند.
+- Passwordها فقط به‌صورت hash ذخیره می‌شوند.
+- `AUTH_SECRET` از environment خوانده می‌شود.
+- در production نبودن `AUTH_SECRET` مانع startup می‌شود.
+- Authorization در backend enforce می‌شود و به UI وابسته نیست.
+- داده‌ها بر اساس سازمان و مالکیت resource فیلتر می‌شوند.
+- Database، `.env`، `node_modules` و build output در Git نادیده گرفته شده‌اند.
+- برای deployment واقعی باید HTTPS، secret قوی، database production و server hardening تنظیم شود.
 
-برای production باید از secret تصادفی قوی، HTTPS، دیتابیس production و تنظیمات مناسب سرور استفاده شود.
+## UI / UX و Theme
 
-## UI/UX و Responsive Design
+- رابط فارسی و RTL
+- Responsive layout برای mobile، tablet و desktop
+- Reusable components برای form، card، modal، button، badge و stateها
+- focus state و کنتراست مناسب برای تعاملات اصلی
+- Light/Dark switching بدون reload
+- persistence تم با `localStorage` و کلید `atlas_theme`
+- semantic color tokens برای background، card، border، input و text
+- پوشش theme در public pages، auth، dashboard، workspace و Control Center
 
-رابط کاربری فارسی و RTL است و برای mobile، tablet و desktop طراحی شده است. کامپوننت‌های مشترک، spacing ثابت، focus state، فرم‌ها، empty state و Toast به نگهداری‌پذیری و تجربه‌ی کاربری کمک می‌کنند. Light و Dark Theme در صفحات عمومی، auth، workspace و control center پوشش داده شده‌اند.
+## تست و کیفیت
 
-## تست و کنترل کیفیت
+اسکریپت‌های واقعی پروژه:
 
 ```bash
 npm install
@@ -130,7 +220,13 @@ npm run test
 npm run build
 ```
 
-تست‌های موجود hashing و verification رمز عبور، JWT و foreign keyهای relational database را بررسی می‌کنند. آخرین اجرای validation شامل ۲ suite و ۴ تست بود؛ هر ۴ تست موفق و بدون failure بودند.
+آخرین validation واقعی پروژه:
+
+- Lint / TypeScript check: PASS
+- Test: PASS — ۲ suite، ۴ تست، ۰ failure
+- Production build: PASS
+
+تست‌های موجود password hashing، JWT signing/verification، رد token دستکاری‌شده و foreign keyهای database را پوشش می‌دهند. Automated E2E test در پروژه ادعا نمی‌شود.
 
 ## نصب و اجرا
 
@@ -140,42 +236,53 @@ copy .env.example .env
 npm run dev
 ```
 
-سرور development روی پورت `3000` اجرا می‌شود. برای production ابتدا build بگیرید و سپس با `NODE_ENV=production` سرور را اجرا کنید.
+برنامه در development روی `http://localhost:3000` اجرا می‌شود.
+
+برای production:
 
 ```bash
 npm run build
 npm run start
 ```
 
-## متغیرهای محیطی
+## Environment Variables
 
-نمونه‌ی متغیرها در `.env.example` قرار دارد: `PORT`، `AUTH_SECRET` و `NODE_ENV`. مقدار واقعی secret نباید در Git، README یا source قرار بگیرد.
+فایل `.env.example` فقط نام متغیرها را مشخص می‌کند:
 
-## 🤖 AI-Assisted Development
+```env
+PORT=3000
+AUTH_SECRET=replace-with-a-long-random-secret
+NODE_ENV=development
+```
 
-این پروژه با استفاده از AI-assisted development نیز توسعه و بررسی شده است. ابزارهای استفاده‌شده شامل Google AI Studio و OpenAI Codex بوده‌اند. استفاده از این ابزارها برای سرعت‌بخشیدن به پیاده‌سازی، audit و مستندسازی انجام شد و ساختار، تست، اجرای پروژه و بررسی نهایی به‌صورت عملی روی همین repository انجام شده است.
+مقدار واقعی secret نباید در source code، README یا GitHub قرار بگیرد.
 
-## وضعیت فعلی پروژه
+## AI-Assisted Development
 
-Atlas Hub یک نمونه‌ی Full-Stack قابل اجرا و قابل بررسی است.
+این پروژه با استفاده از AI-assisted development نیز توسعه و بررسی شده است. ابزارهای استفاده‌شده شامل Google AI Studio و OpenAI Codex بوده‌اند. استفاده از AI برای سرعت‌بخشیدن به implementation، audit و documentation انجام شد؛ source code، تست‌ها، اجرای محلی و validation نهایی به‌صورت عملی بررسی شده‌اند.
 
-- Frontend: Ready
-- Backend و REST API: Ready
-- Authentication و RBAC: Implemented
-- SQLite relational database: Implemented
-- Responsive UI و Light/Dark Theme: Implemented
-- Tests: 4 passing
-- Production build: Passing
-- Production deployment: نیازمند تنظیم secret، HTTPS و زیرساخت مقصد
+## وضعیت فعلی
+
+| بخش | وضعیت |
+|---|---|
+| Frontend | Ready |
+| Backend و REST API | Ready |
+| Authentication و RBAC | Implemented |
+| SQLite relational database | Implemented |
+| Responsive UI | Implemented؛ automated E2E ادعا نمی‌شود |
+| Light / Dark Theme | Implemented و verified |
+| Tests | 4 passing |
+| Production build | Passing |
+| Live deployment | ارائه نشده است |
 
 ## توسعه‌های آینده
 
-- E2E test با browser automation
-- migration versioning برای schema
-- rate limiting و request validation متمرکز
+- Automated E2E coverage
+- Schema migration versioning
+- Rate limiting و request validation متمرکز
 - CI pipeline برای lint، test و build
-- storage خارجی برای avatar و فایل‌های پیوست
+- External storage برای avatar و attachmentها
 
 ## License
 
-در حال حاضر license مشخصی به repository اضافه نشده است.
+در حال حاضر license مشخصی برای repository اضافه نشده است.
