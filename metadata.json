@@ -1,0 +1,6 @@
+{
+  "name": "Atlas Hub - Business Operations & Client Management",
+  "description": "Enterprise-grade business operations and client management platform with role-based access control, task tracking, support ticketing, and invoicing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *, [data-theme="dark"], [data-theme="dark"] *));
+
+@layer base {
+  :root {
+    --font-sans: 'Vazirmatn', 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Semantic Theme Tokens - Light Mode */
+    --background: #f8fafc;
+    --foreground: #0f172a;
+    --card: #ffffff;
+    --card-foreground: #0f172a;
+    --muted: #f1f5f9;
+    --muted-foreground: #64748b;
+    --border: #e2e8f0;
+    --input: #e2e8f0;
+    --primary: #4f46e5;
+    --primary-foreground: #ffffff;
+    --secondary: #f1f5f9;
+    --secondary-foreground: #0f172a;
+    --accent: #e0e7ff;
+    --accent-foreground: #3730a3;
+    --destructive: #e11d48;
+
+    color-scheme: light;
+  }
+
+  .dark,
+  :root.dark,
+  [data-theme='dark'] {
+    /* Semantic Theme Tokens - Dark Mode */
+    --background: #020617;
+    --foreground: #f8fafc;
+    --card: #0f172a;
+    --card-foreground: #f8fafc;
+    --muted: #1e293b;
+    --muted-foreground: #94a3b8;
+    --border: #1e293b;
+    --input: #1e293b;
+    --primary: #6366f1;
+    --primary-foreground: #ffffff;
+    --secondary: #1e293b;
+    --secondary-foreground: #f8fafc;
+    --accent: #312e81;
+    --accent-foreground: #c7d2fe;
+    --destructive: #f43f5e;
+
+    color-scheme: dark;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--background);
+    color: var(--foreground);
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+
+  /* Prevent unexpected horizontal page overflow */
+  body {
+    overflow-x: hidden;
+    min-height: 100vh;
+    background-color: var(--background);
+    color: var(--foreground);
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+
+  /* Form & input focus styles */
+  input, select, textarea, button {
+    font-family: inherit;
+  }
+
+  select option {
+    background-color: var(--card);
+    color: var(--card-foreground);
+  }
+
+  ::selection {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+  }
+}
+
+@layer utilities {
+  .theme-page { background-color: var(--background); color: var(--foreground); }
+  .theme-card { background-color: var(--card); color: var(--card-foreground); border-color: var(--border); }
+  .theme-card-translucent { background-color: color-mix(in srgb, var(--card) 95%, transparent); color: var(--card-foreground); border-color: var(--border); }
+  .theme-muted { background-color: var(--muted); color: var(--muted-foreground); }
+  .theme-border { border-color: var(--border); }
+  .theme-input { background-color: var(--card); color: var(--card-foreground); border-color: var(--input); }
+  .theme-input::placeholder { color: var(--muted-foreground); }
+}
+
+/* Custom scrollbar for tables and code blocks */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--muted-foreground) 40%, transparent);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--muted-foreground) 60%, transparent);
+}
