@@ -13,10 +13,6 @@
   <img src="https://img.shields.io/badge/SQLite-relational-003B57?logo=sqlite&logoColor=white" alt="SQLite" />
 </p>
 
-<p align="center">
-  <a href="https://github.com/BYPASS-CODEE/atlas-hub">View Repository</a>
-</p>
-
 <table align="center">
   <tr>
     <td align="center"><a href="#قابلیتهای-اصلی"><strong>Explore Features</strong></a><br /><sub>Workspace · CRM · Finance</sub></td>
