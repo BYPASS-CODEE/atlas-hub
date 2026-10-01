@@ -1,9 +1,11 @@
-<p align="center">
-  <strong>ATLAS HUB</strong>
-</p>
+<h1 align="center">ATLAS HUB</h1>
 
 <p align="center">
   Full-Stack business operations platform for clients, projects, teams and service delivery.
+</p>
+
+<p align="center">
+  <img src="docs/atlas-hub-hero.svg" width="940" alt="Atlas Hub product overview showing the workspace, delivery, finance and secure API layers" />
 </p>
 
 <p align="center">
