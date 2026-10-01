@@ -5,10 +5,6 @@
 </p>
 
 <p align="center">
-  <img src="docs/atlas-hub-hero.svg" width="940" alt="Atlas Hub product overview showing the workspace, delivery, finance and secure API layers" />
-</p>
-
-<p align="center">
   <a href="https://github.com/BYPASS-CODEE/atlas-hub"><img src="https://img.shields.io/badge/GitHub-BYPASS--CODEE%2Fatlas--hub-181717?logo=github" alt="GitHub repository" /></a>
   <img src="https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=111827" alt="React" />
   <img src="https://img.shields.io/badge/TypeScript-7-3178C6?logo=typescript&logoColor=white" alt="TypeScript" />
@@ -18,17 +14,17 @@
 </p>
 
 <p align="center">
-  <a href="#قابلیتهای-اصلی">Features</a> ·
-  <a href="#معماری">Architecture</a> ·
-  <a href="#امنیت">Security</a> ·
-  <a href="#product-showcase">Screenshots</a> ·
-  <a href="#تست-و-کیفیت">Testing</a> ·
-  <a href="#نصب-و-اجرا">Installation</a>
+  <a href="https://github.com/BYPASS-CODEE/atlas-hub">View Repository</a>
 </p>
 
-<p align="center">
-  <a href="https://github.com/BYPASS-CODEE/atlas-hub">مشاهده Repository</a>
-</p>
+<table align="center">
+  <tr>
+    <td align="center"><a href="#قابلیتهای-اصلی"><strong>Explore Features</strong></a><br /><sub>Workspace · CRM · Finance</sub></td>
+    <td align="center"><a href="#معماری"><strong>See Architecture</strong></a><br /><sub>React · REST API · SQLite</sub></td>
+    <td align="center"><a href="#امنیت"><strong>Review Security</strong></a><br /><sub>JWT · RBAC · Access Control</sub></td>
+    <td align="center"><a href="#product-showcase"><strong>View Product</strong></a><br /><sub>Light · Dark · Responsive</sub></td>
+  </tr>
+</table>
 
 ---
 
