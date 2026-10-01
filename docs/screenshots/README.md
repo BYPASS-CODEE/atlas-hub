@@ -1,12 +1,13 @@
 # Screenshot capture guide
 
-برای انتشار repository، از صفحه‌ی اصلی اجرای واقعی Atlas Hub در این viewportها screenshot تهیه کنید:
+این پوشه شامل screenshotهای واقعی صفحه‌ی اصلی Atlas Hub است:
 
-- `home-mobile.png` — `390 × 844`
-- `home-tablet.png` — `820 × 1180`
-- `home-desktop.png` — `1440 × 900`
+- `desktop-light.png`
+- `desktop-dark.png`
+- `mobile-light.jpg`
+- `mobile-dark.jpg`
 
-دستور اجرا:
+برای capture مجدد یا بررسی تصاویر، دستور اجرا:
 
 ```bash
 npm install

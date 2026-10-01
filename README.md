@@ -6,9 +6,25 @@ Atlas Hub یک پلتفرم Full-Stack برای مدیریت عملیات کسب
 
 این سامانه برای تیم‌ها و شرکت‌های خدماتی طراحی شده است تا چرخه‌ی کار از ثبت مشتری و پروژه تا پیگیری وظایف، تیکت‌های پشتیبانی، فاکتورها و گزارش‌ها در یک محیط یکپارچه انجام شود. رابط کاربری فارسی، راست‌چین، responsive و دارای Light/Dark Theme است.
 
-## تصاویر پروژه
+## 📸 Screenshots
 
-اسکرین‌شات‌های واقعی باید از اجرای محلی برنامه و در اندازه‌های `390 × 844`، `820 × 1180` و `1440 × 900` تهیه شوند. در این محیط امکان ذخیره‌ی مستقیم خروجی Screenshot مرورگر در فایل repository فراهم نبود؛ بنابراین تصویر ساختگی یا placeholder در README قرار داده نشده است. دستورالعمل دقیق در [docs/screenshots/README.md](docs/screenshots/README.md) قرار دارد.
+تصاویر زیر از اجرای واقعی پروژه تهیه شده‌اند و نسخه‌ی Light و Dark را در desktop و mobile نشان می‌دهند.
+
+### Desktop — Light
+
+![Atlas Hub Desktop Light](docs/screenshots/desktop-light.png)
+
+### Desktop — Dark
+
+![Atlas Hub Desktop Dark](docs/screenshots/desktop-dark.png)
+
+### Mobile — Light
+
+![Atlas Hub Mobile Light](docs/screenshots/mobile-light.jpg)
+
+### Mobile — Dark
+
+![Atlas Hub Mobile Dark](docs/screenshots/mobile-dark.jpg)
 
 ## قابلیت‌های اصلی
 
@@ -74,6 +90,15 @@ Backend با Node.js، Express و TypeScript اجرا می‌شود. APIهای a
 
 بررسی سازمان و مالکیت منابع در routeهای مرتبط انجام می‌شود تا دسترسی به داده‌ی سازمان دیگر از طریق تغییر شناسه امکان‌پذیر نباشد.
 
+### Roles & Access Control
+
+- `ADMIN`: دسترسی مرکز کنترل و عملیات مدیریتی کل سیستم؛ تنها این نقش می‌تواند نقش `ADMIN` اختصاص دهد.
+- `MANAGER`: مدیریت منابع عملیاتی سازمان، شامل مشتریان، پروژه‌ها، فاکتورها و اعضای تیم در محدوده‌ی سازمان.
+- `TEAM_MEMBER`: دسترسی عملیاتی به منابع مجاز سازمان و انجام وظایف محول‌شده.
+- `CLIENT`: دسترسی محدود به اطلاعات و تیکت‌های مرتبط با خود.
+
+سطح دسترسی نهایی در backend بررسی می‌شود و صرفاً به کنترل‌های رابط کاربری وابسته نیست.
+
 ## پایگاه داده
 
 پروژه از SQLite با API داخلی `node:sqlite` استفاده می‌کند. schema شامل users، organizations، organization_members، clients، projects، project_members، tasks، task_comments، support_tickets، ticket_messages، invoices، invoice_items، payments، notifications، audit_logs و contact_messages است.
@@ -105,7 +130,7 @@ npm run test
 npm run build
 ```
 
-تست‌های موجود hashing و verification رمز عبور، JWT و foreign keyهای relational database را بررسی می‌کنند. تعداد دقیق تست‌ها باید از خروجی همان اجرای commandها گزارش شود.
+تست‌های موجود hashing و verification رمز عبور، JWT و foreign keyهای relational database را بررسی می‌کنند. آخرین اجرای validation شامل ۲ suite و ۴ تست بود؛ هر ۴ تست موفق و بدون failure بودند.
 
 ## نصب و اجرا
 
@@ -117,13 +142,31 @@ npm run dev
 
 سرور development روی پورت `3000` اجرا می‌شود. برای production ابتدا build بگیرید و سپس با `NODE_ENV=production` سرور را اجرا کنید.
 
+```bash
+npm run build
+npm run start
+```
+
 ## متغیرهای محیطی
 
 نمونه‌ی متغیرها در `.env.example` قرار دارد: `PORT`، `AUTH_SECRET` و `NODE_ENV`. مقدار واقعی secret نباید در Git، README یا source قرار بگیرد.
 
+## 🤖 AI-Assisted Development
+
+این پروژه با استفاده از AI-assisted development نیز توسعه و بررسی شده است. ابزارهای استفاده‌شده شامل Google AI Studio و OpenAI Codex بوده‌اند. استفاده از این ابزارها برای سرعت‌بخشیدن به پیاده‌سازی، audit و مستندسازی انجام شد و ساختار، تست، اجرای پروژه و بررسی نهایی به‌صورت عملی روی همین repository انجام شده است.
+
 ## وضعیت فعلی پروژه
 
-Atlas Hub یک نمونه‌ی Full-Stack قابل اجرا و قابل بررسی است که بخش‌های اصلی مدیریت کسب‌وکار، Authentication، Authorization، دیتابیس رابطه‌ای، تست و build را پیاده‌سازی کرده است. برای deployment واقعی، تنظیمات secret، HTTPS، observability و زیرساخت production باید متناسب با محیط مقصد تکمیل شود.
+Atlas Hub یک نمونه‌ی Full-Stack قابل اجرا و قابل بررسی است.
+
+- Frontend: Ready
+- Backend و REST API: Ready
+- Authentication و RBAC: Implemented
+- SQLite relational database: Implemented
+- Responsive UI و Light/Dark Theme: Implemented
+- Tests: 4 passing
+- Production build: Passing
+- Production deployment: نیازمند تنظیم secret، HTTPS و زیرساخت مقصد
 
 ## توسعه‌های آینده
 
