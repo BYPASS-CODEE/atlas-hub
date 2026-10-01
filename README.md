@@ -282,7 +282,3 @@ NODE_ENV=development
 - Rate limiting و request validation متمرکز
 - CI pipeline برای lint، test و build
 - External storage برای avatar و attachmentها
-
-## License
-
-در حال حاضر license مشخصی برای repository اضافه نشده است.
